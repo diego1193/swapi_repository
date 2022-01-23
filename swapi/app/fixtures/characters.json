@@ -1,0 +1,1 @@
+[{"model": "app.character", "pk": 1, "fields": {"created": "2020-06-14T18:23:30.831Z", "modified": "2020-06-14T18:23:30.831Z", "name": "Luka", "height": 190, "mass": 87, "hair_color": "black", "skin_color": "light", "eye_color": "brown", "birth_year": "5BYU", "gender": "male", "films": [1, 2]}}]

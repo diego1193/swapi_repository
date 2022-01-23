@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "dda1e04d-0511-4771-a87e-dce2eace6084",
+		"name": "SWAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get People",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allPeople{\n        edges{\n            node{\n                id,\n                name,\n                gender,\n                height,\n                mass,\n                hairColor,\n                skinColor,\n                eyeColor,\n                birthYear,\n                homeWorld{\n                    name\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Character",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allCharacter{\n        edges{\n            node{\n                id,\n                name,\n                gender,\n                height,\n                mass,\n                hairColor,\n                skinColor,\n                eyeColor,\n                birthYear,\n                films{\n                    edges{\n                        node{\n                            title\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Planets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allPlanets{\n        edges{\n            node{\n                id,\n                name,\n                rotationPeriod,\n                orbitalPeriod,\n                diameter,\n                climate,\n                gravity,\n                terrain,\n                surfaceWater,\n                population,\n                inhabitants{\n                    edges{\n                        node{\n                            name\n                        }\n                    }\n\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Films",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allFilms{\n        edges{\n            node{\n                id,\n                title,\n                episodeId,\n                openingCrawl,\n                releaseDate,\n                characters{\n                    edges{\n                        node{\n                            name\n                        }\n                    }\n                },\n                planets{\n                    edges{\n                        node{\n                            name\n                        }\n                    }\n                },\n                director{\n                    name\n                }\n                producer{\n                    edges{\n                        node{\n                            name\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Directors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allDirectors{\n        edges{\n            node{\n                name\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Producers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    allProducers{\n        edges{\n            node{\n                name\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Planet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewPlanet{\n    addUpdatePlanet(input:{name: \"Exodeen\"}){\n        planet{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Planet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addUpdateNewPlanet{\n    addUpdatePlanet(input:{name: \"Tatooine\", id:\"UGxhbmV0Tm9kZTo2MQ==\"}){\n        planet{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Director",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewDirector{\n    addDirector(input:{name: \"J.J. Json\"}){\n        director{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Director",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewDirector{\n    addDirector(input:{name: \"J.J. Abrams\", id:\"RGlyZWN0b3JOb2RlOjQ=\"}){\n        director{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewProducer{\n    addProducer(input:{name: \"J.J. Adrian\"}){\n        producer{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewProducer{\n    addProducer(input:{name: \"J.J. Abrams\", id:\"UHJvZHVjZXJOb2RlOjU=\"}){\n        producer{\n            id,\n            name\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewPeople{\n    addPeople(input:{name: \"Mauricio Flow\", gender: \"male\", height: \"190\", mass: \"100\", hairColor: \"black\", eyeColor: \"brown\", skinColor: \"light\", birthYear: \"7ABY\", homeWorldId: 32}){\n        people{\n            id,\n            name,\n            gender,\n            height,\n            mass,\n            hairColor,\n            eyeColor, \n            skinColor, \n            birthYear\n            homeWorld{\n                name,\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update People",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewPeople{\n    addPeople(input:{id: \"UGVvcGxlTm9kZTo4NA==\", name: \"Mauricio Flow\", gender: \"male\", height: \"190\", mass: \"100\", hairColor: \"black\", eyeColor: \"brown\", skinColor: \"light\", birthYear: \"7ABY\", homeWorldId: 32}){\n        people{\n            id,\n            name,\n            gender,\n            height,\n            mass,\n            hairColor,\n            eyeColor,\n            skinColor,\n            birthYear\n            homeWorld{\n                name,\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Character",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewCharacter{\n    addCharacter(input:{name: \"Leo Rou\", gender: \"male\", height: \"189\", mass: \"100\", hairColor: \"black\", eyeColor: \"brown\", skinColor: \"light\", birthYear: \"5ABYU\", films: [{title:\"Revenge of the Sith\"}]}){\n        character{\n            id,\n            name,\n            gender,\n            height,\n            mass,\n            hairColor,\n            eyeColor, \n            skinColor, \n            birthYear,\n\n            }\n        }\n    }\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Character",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewCharacter{\n    addCharacter(input:{id: \"Q2hhcmFjdGVyTm9kZToy\", name: \"Flan Flan\", gender: \"female\", height: \"190\", mass: \"89\", hairColor: \"blue\", eyeColor: \"brown\", skinColor: \"light\", birthYear: \"5ABW\", films: [{title:\"Revenge of the Sith\"}]}){\n        character{\n            id,\n            name,\n            gender,\n            height,\n            mass,\n            hairColor,\n            eyeColor, \n            skinColor, \n            birthYear,\n            films{\n                edges{\n                    node{\n                        title\n                    }\n                }\n            }\n            }\n        }\n    }\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Film",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewFilm{\n    addFilm(input:{title:\"The Rise of Sky\", episodeId:10, openingCrawl: \"In a galaxy far far away in the...\", releaseDate:\"2019-12-20\", director: 3, producer: [{name:\"J.J. Abrams\"}]}){\n        film{\n            id,\n            episodeId,\n            openingCrawl,\n            releaseDate,\n            director{\n                name\n            },\n            producer{\n                edges{\n                    node{\n                        name\n                    }\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Film",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addNewFilm{\n    addFilm(input:{id: \"RmlsbU5vZGU6Nw==\", title:\"The Rise\", episodeId:11, openingCrawl: \"In a galaxy far far away...\", releaseDate:\"2019-12-20\", director: 3, producer: [{name:\"J.J. Abrams\"}]}){\n        film{\n            id,\n            episodeId,\n            openingCrawl,\n            releaseDate,\n            director{\n                name\n            },\n            producer{\n                edges{\n                    node{\n                        name\n                    }\n                }\n            }\n        }\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
