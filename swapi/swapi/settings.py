@@ -10,7 +10,7 @@ SECRET_KEY = get_random_string(50, chars)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["diegocabrera1193.pythonanywhere.com"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
